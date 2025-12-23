@@ -1,0 +1,21 @@
+#!/bin/sh
+
+. "$(dirname "$0")/setup"
+
+if [ -z "$1" ] || [ "$1" = "help" ]; then
+    echo "Usage: uninstall TARGET (@local or @preview)"
+    exit 1
+fi
+
+TARGET_BASE=$(resolve_target "$1")
+TARGET_DIR="${TARGET_BASE}/${PKG_NAME}/${PKG_VERSION}"
+
+if [ ! -d "$TARGET_DIR" ]; then
+    echo "Package not installed at: $TARGET_DIR"
+    exit 1
+fi
+
+echo "Removing: $TARGET_DIR"
+rm -rf "$TARGET_DIR"
+
+echo "Package $PKG_NAME:$PKG_VERSION uninstalled."

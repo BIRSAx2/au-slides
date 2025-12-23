@@ -1,0 +1,23 @@
+[package]
+name = "au-slides"
+version = "0.1.0"
+entrypoint = "src/au-slides.typ"
+authors = ["BIRSAx2"]
+license = "MIT"
+description = "A modern, presentation template for Aarhus University"
+repository = "https://github.com/BIRSAx2/au-slides"
+categories = ["presentation", "thesis"]
+keywords = ["presentation", "slides", "polylux", "aarhus", "university", "AU", "professional"]
+compiler = "0.12.0"
+exclude = [
+  "justfile",
+  "scripts",
+  "thumbnails",
+  "*.pdf",
+  "**/.DS_Store",
+]
+
+[template]
+path = "template"
+entrypoint = "main.typ"
+thumbnail = "thumbnails/cover.png"
