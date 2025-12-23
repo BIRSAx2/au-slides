@@ -121,7 +121,7 @@
     lang: "en",
   )
 
-  show math.equation: set text(font: "Fira Math")
+  show math.equation: set text(font: "STIX Two Math")
 
   show strong: set text(weight: "bold")
   show emph: set text(style: "italic")
