@@ -61,7 +61,8 @@
       )),
 
       if date != none {
-        align(right + horizon, text(size: 0.9em, date))
+        context align(right + horizon, text(size: 0em, ""))
+        context align(right + horizon, text(size: 0.9em, date))
       } else {
         none
       },
